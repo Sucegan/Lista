@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Administrativo - Presentes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Gestão da Lista</h1>
+      <p>Utilize a senha de acesso para gerir as sugestões de presentes da página pública.</p>
+    </header>
+
+    <section class="card admin-card">
+      <h2>Acesso Restrito</h2>
+      <p class="subtitle">Insira a senha para desbloquear as ferramentas de edição.</p>
+      <div class="admin-row">
+        <input id="adminPassword" type="password" placeholder="Senha de administrador" aria-label="Senha">
+        <button id="adminAccessButton" type="button">Desbloquear Painel</button>
+      </div>
+      <p id="adminMessage" class="subtitle">O formulário está oculto por segurança.</p>
+    </section>
+
+    <section class="card form-card hidden">
+      <h2>Adicionar Nova Ideia</h2>
+      <form id="giftForm">
+        <label for="giftName">Nome do Presente</label>
+        <input type="text" id="giftName" placeholder="Ex: Comando Nintendo, Livro de Arte..." required>
+
+        <label for="giftImage">URL da imagem do presente</label>
+        <input type="url" id="giftImage" placeholder="https://exemplo.com/imagem.jpg">
+
+        <label for="giftNotes">Observações / Detalhes</label>
+        <textarea id="giftNotes" rows="3" placeholder="Ex: Cor preta, link da loja, tamanho..."></textarea>
+
+        <button type="submit">Guardar Ideia</button>
+      </form>
+    </section>
+
+    <section class="card ideas-card hidden" id="adminIdeaSection">
+      <div class="list-header">
+        <h2>Ideias Publicadas</h2>
+        <span class="subtitle">Estes itens aparecem para todos os utilizadores.</span>
+      </div>
+      <div id="adminIdeaList" class="suggestion-grid"></div>
+    </section>
+
+    <section class="card list-card hidden" id="adminListSection">
+      <div class="list-header">
+        <h2>Lista de Selecionados</h2>
+        <span id="count">0 itens</span>
+      </div>
+      <ul id="giftList" class="gift-list"></ul>
+    </section>
+
+    <footer class="footer-note">
+      <p><a href="index.html">Voltar para a página pública</a></p>
+    </footer>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>

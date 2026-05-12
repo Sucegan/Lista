@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Aniversário</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Lista de Aniversário</h1>
+      <p>Explore as ideias de presentes e selecione as suas favoritas.</p>
+    </header>
+
+    <section class="card ideas-card">
+      <div class="list-header">
+        <h2>Ideias de Presentes</h2>
+        <span class="subtitle">Clique num card para adicioná-lo à lista de desejos.</span>
+      </div>
+      <div id="ideaList" class="suggestion-grid"></div>
+    </section>
+
+    <section class="card list-card">
+      <div class="list-header">
+        <h2>Presentes Selecionados</h2>
+        <span id="count">0 itens</span>
+      </div>
+      <ul id="giftList" class="gift-list"></ul>
+    </section>
+
+    <footer class="footer-note">
+      <p>Administrador? Acesse o painel em <a href="admin.html">Login</a>.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
